@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Paleta de Cores */
+:root {
+    --primary-color: #4CAF50;
+    /* Verde */
+    --secondary-color: #F8F9FA;
+    /* Branco */
+    --tertiary-color: #A5D6A7;
+    /* Verde claro */
+    --quaternary-color: #E8F5E9;
+    /* Verde muito claro */
+    --quinary-color: #78909C;
+    /* Cinza azulado */
+}
+
+/* Estilo Global */
+
+
+
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    box-sizing: border-box;
+
+}
+
+body {
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--quaternary-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+h5,
+p {
+    color: var(--secondary-color);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: var(--secondary-color) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--tertiary-color) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--secondary-color) !important;
+}
+
+/* Estilo para o link ativo */
+.nav-link.active {
+    color: var(--tertiary-color) !important;
+    font-weight: bold;
+    border-bottom: 2px solid var(--tertiary-color);
+}
+
+/* Carrossel */
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+footer .container img {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+footer .container img:hover {
+    opacity: 1;
+}
+
+/* Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Sessões */
+.section {
+    padding: 100px 0;
+    background-color: var(--quaternary-color);
+}
+
+.section h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section p {
+    color: var(--quinary-color);
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* Cards */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.card-text {
+    color: var(--quinary-color);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Experiências */
+#experiencias {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('img/locations/paraiba_6.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #FEE1DD;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 15px;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.quote-icon {
+    font-size: 1.5em;
+    color: #FEE1DD;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #F8F9FA;
+}
+
+.testimonial-footer {
+    text-align: right;
+    font-size: 1em;
+    color: #A5D6A7;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Seção de Contato */
+#contato {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('img/locations/paraiba_2.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 60px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    width: 45%;
+    color: #F8F9FA;
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #FEE1DD;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #A5D6A7;
+}
+
+.contact-form {
+    width: 45%;
+}
+
+.contact-form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #FEE1DD;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #F8F9FA;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9BA4B4;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #388E3C;
+}
+
+/* Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #4CAF50;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-social {
+    width: 45%;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #A5D6A7;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+    color: #F8F9FA;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: #4CAF50;
+}
+
+.footer-social ul li a {
+    font-size: 1.5em;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #9BA4B4;
+    font-size: 1em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Base para telas menores que 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.5em;
+    }
+
+    .contact-info p,
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links,
+    .footer-social {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Base para telas menores que 576px */
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .testimonial p {
+        font-size: 1rem;
+    }
+
+    .quote-icon {
+        font-size: 1.2em;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-info p,
+    .form-group label {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    .footer-links h3,
+    .footer-social h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustes para telas maiores que 1200px */
+@media (min-width: 1200px) {
+    .section {
+        padding: 120px 0;
+    }
+
+    .section h2 {
+        font-size: 3rem;
+    }
+
+    .section p {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.5rem;
+    }
+}
